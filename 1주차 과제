@@ -5,10 +5,12 @@ using namespace std;
 
 int main() {
     string words;
+    cout << "문자열을 입력하세요: ";
     getline(cin, words);  // 띄어쓰기까지 포함되게하기 위해서.
 
     int wordslength = words.length();
     cout << endl;
+    cout << "문자열 회전 결과: " << endl;
 
     for (int i = 0; i < wordslength; i++)
     {
