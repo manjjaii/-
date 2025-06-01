@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string words;
+    getline(cin, words);  // 띄어쓰기까지 포함되게하기 위해서.
+
+    int wordslength = words.length();
+    cout << endl;
+
+    for (int i = 0; i < wordslength; i++)
+    {
+        cout << words << endl;
+
+        char save = words[0];
+
+        for (int a = 0; a < wordslength - 1; a++)
+            words[a] = words[a + 1];
+
+        words[wordslength - 1] = save;
+    }
+
+    return 0;
+}
